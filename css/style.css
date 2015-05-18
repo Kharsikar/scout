@@ -1,0 +1,175 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #444444;
+
+	/* site background image */
+	background-image: url(../images/blur-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	/* stick the bg image in place - does not scroll with the site*/
+	background-attachment: fixed;
+}
+
+header {	
+	padding: 90px 0 90px 0;
+	color: #FCFCFC;
+	text-align: center;
+
+	/* BG */
+	background: url(../images/mountain.jpg) center no-repeat;
+	/* background size cover can't be added into the short hand above*/
+	background-size: cover;
+}
+
+
+nav {
+	background-color: #697A97;
+	padding: 25px 0 25px 0;
+	text-align: center;
+	margin: 0 0 25px 0;
+
+}
+
+/* just the a tags within the nav */
+nav a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 25 0 25px 0;
+	/* creating a margin between the links */
+	margin: 0 20px 0 20px;
+
+}
+
+section {
+	/* be as wide as possible but no more than 720px */
+	/* when there is not enough space for 720px it will not break out and cause scroll bars */
+	max-width: 720px;	
+	margin: 0 auto 0 auto;
+	background-color: #FCFCFC;
+
+	/* create some extra space around the content inside of out section */
+	padding: 30px 30px 30px 30px;
+}
+
+/* only the p tags within the header - does not affect the p tags for the rest of the site */
+ header p {
+	font-size: 24px;
+	color: #ffffff;
+}
+
+
+h1{
+	font-size: 48px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0 0 20px 0;
+}
+
+/* add some space below p tags and images */
+p, img {
+	margin: 0 0 20px 0;
+}
+
+blockquote {
+	max-width: 720px;
+	/* position into the centre */
+	margin: 50px auto 50px auto;
+	background-color: #697A97;
+	padding: 40px 80px 40px 80px;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+footer {
+	text-align: center;
+	color: #ffffff;
+	padding: 50px 50px 50px 50px;
+}
+
+iframe {
+	/* 100% of the section of the iframe is inside of */
+	/* using percentages is always releative to the tag that it is inside of */
+	max-width: 100%;
+}
+
+/* use a class to add some rules */
+/* center align text within the intro section - ( class="intro" ) */
+.intro {
+	text-align: center;
+}
+
+/* 2nd page styles*/
+
+/* Destinations */
+
+.destination {
+	width: 320px;
+	/* tries to go to the up most left hand corner  --> if there is a space it will go higher on the page */
+	float: left;
+}
+
+/* if they have both classes destination and alternate - alternate will overide */
+.alternate {
+	float: right;
+
+}
+
+/* add in our responsive styles */
+
+@media screen and (max-width: 720px){
+
+	/* any screen size that is less than 720px should gave these rules */
+	/* these rules override the ones from above */
+
+	h1{
+		font-size: 32px;
+	}
+
+	header p {
+		font-size: 18px;
+	}
+
+	nav {
+		/* 10px bottom margin */
+		margin: 0 0 10px 0;
+	}
+
+	nav a {
+		/* stack links on top of each other */
+		display: block;
+	}
+
+	section {
+		/* replace our margin auto with a fixed 10% space on the left and right sides */
+		margin: 0 10px 0 10px;
+	}
+
+	blockquote {
+		/* replace our margins on the top and bottom with slightly smaller margins to match the sides of the section */
+		margin: 10px 10px 10px 10px;
+	}
+
+	.destination {
+		float: none;
+		width: auto;
+	}
+
+	/* just the images within the destination group */
+	.destination img {
+		width: 100%;
+
+
+	}
+}
+
